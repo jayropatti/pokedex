@@ -41,4 +41,20 @@ async function getPokemon(num){
 
 function updatePokemon(){
     document.getElementById("pokemon-img").src= pokedex[this.id]["img"]
+    //verwijder vorige types
+    let typesDiv = document.getElementById("pokemon-types");
+    while (typesDiv.firstChild){ //als deze div tags bevat, worden deze verwijderd
+        typesDiv.firstChild.remove();
+    }
+    
+    //update types
+    let types = pokedex[this.id]["types"];
+    for(let i = 0; i < types.length; i++){
+        let type = document.createElement("span");
+        type.innerText = types[i]["type"]["name"].toUpperCase();
+        types.classList.add("type-box");
+        types.classList.add(types[i]["types"]["name"]); //voegt achtergrond kleur en lettertype kleur toe
+        typesDiv.append(type);
+    }
+
 }
