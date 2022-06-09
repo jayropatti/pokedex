@@ -59,4 +59,8 @@ function updatePokemon(){
         typesDiv.append(type);
     }
 
+    // update beschrijving
+    document.getElementById("pokemon-description").innerText = pokedex[this.id]["desc"];
+    
+
 }
