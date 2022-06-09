@@ -7,7 +7,7 @@ window.onload = async function(){
     for (let i = 1; i <= pokemonCount; i++){
         await getPokemon(i);
     }
-    console.log(pokedex)
+    console.log(pokedex);
 }
 
 async function getPokemon(num){
