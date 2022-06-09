@@ -43,7 +43,7 @@ function updatePokemon(){
     document.getElementById("pokemon-img").src= pokedex[this.id]["img"]
     //verwijder vorige types
     let typesDiv = document.getElementById("pokemon-types");
-    while (typesDiv.firstChild){ //als deze div tags bevat, worden deze verwijderd
+    while (typesDiv.firstChild) {
         typesDiv.firstChild.remove();
     }
     
