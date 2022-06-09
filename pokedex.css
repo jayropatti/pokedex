@@ -29,3 +29,12 @@ body {
     font-size: 18px;
     overflow-y: auto; /* als tekst buiten 500px valt, wordt tekst vak scrollable */
   } 
+
+
+.pokemon-name{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;  /*afstand tussen namen */                      
+    background-color: white;
+
+}
