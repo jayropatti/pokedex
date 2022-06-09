@@ -37,5 +37,14 @@ body {
     margin: 5px;  /*afstand tussen namen */                      
     background-color: white;
     padding: 5px;
-    
+
+}
+
+#pokemon-info{
+    width: 160px;
+    height: 160px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: white;
 }
