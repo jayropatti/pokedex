@@ -4,6 +4,9 @@ var pokedex = {}; // {1 : {"name" : "bulbasaur", "img" : url, "type" : ["grass",
 
 window.onload = async function(){
     getPokemon(1);
+    for (let i = 0; i <= pokemonCount; i++){
+        await getPokemon(i);
+    }
     console.log(pokedex)
 }
 
