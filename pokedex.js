@@ -6,6 +6,11 @@ window.onload = async function(){
     getPokemon(1);
     for (let i = 1; i <= pokemonCount; i++){
         await getPokemon(i);
+        //<div id ="1">BULBASAUR</div>
+        pokemon.id = i;
+        pokemon.innerText = i.toString() + ". " + pokedex[i]["name"].toUpperCase();
+        pokemon.classList.add("pokemon-name");
+        document.getElementById("pokemon-list").append(pokemon);
     }
     console.log(pokedex);
 }
