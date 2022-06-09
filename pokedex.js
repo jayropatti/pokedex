@@ -4,13 +4,14 @@ var pokedex = {}; // {1 : {"name" : "bulbasaur", "img" : url, "type" : ["grass",
 
 window.onload = async function(){
     getPokemon(1);
+    console.log(pokedex)
 }
 
 async function getPokemon(num){
     let url = "https://pokeapi.co/api/v2/pokemon/" + num.toString();
     let res = await fetch(url); //wacht tot deze code eindigt en ga dan verder met de code 
     let pokemon = await res.json();
-    console.log(pokemon);
+    //console.log(pokemon);
 
     let pokemonName = pokemon["name"];
     let pokemonType = pokemon["type"];
@@ -18,6 +19,9 @@ async function getPokemon(num){
 
     res = await fetch(pokemon["species"]["url"]);
     let pokemonDesc = await res.json();
-    console.log(pokemonDesc); 
+    //console.log(pokemonDesc); 
 
+    pokemonDesc = pokemonDesc["flavor_text_entries"][9]["flavor_text"]
+
+    pokedex[num] = {"name" : pokemonName, "img" : pokemonImage, "types" : pokemonType, "desc" : pokemonDesc}
 }
