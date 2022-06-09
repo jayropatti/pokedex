@@ -36,5 +36,6 @@ body {
     border-radius: 10px;
     margin: 5px;  /*afstand tussen namen */                      
     background-color: white;
-
+    padding: 5px;
+    
 }
