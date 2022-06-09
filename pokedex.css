@@ -149,3 +149,16 @@ body {
     background-color: darkviolet;
     color: white;
 }
+
+#pokemon-description{
+    background-color: white;
+    width: 230px; 
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 2px;
+    font-size: 19px;
+    overflow-y: auto;
+}
